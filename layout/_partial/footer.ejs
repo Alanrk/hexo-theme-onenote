@@ -1,0 +1,19 @@
+<div class="footer">
+    <span id="copyright-year">Copyright © <span id="year"></span> <%= config.title %></span>
+    <script type="text/javascript">
+     document.addEventListener('DOMContentLoaded', function() {
+      var yearElement = document.getElementById('year');
+      if (yearElement) {
+        var currentYear = new Date().getFullYear();
+        yearElement.textContent = currentYear;
+      }
+    });
+    
+    window.addEventListener('touchstart', function(event) {
+    // 处理 touchstart 事件的逻辑
+    // 如果不需要调用 event.preventDefault()，可以将事件处理程序标记为 'passive'
+     }, { passive: true });
+   </script>
+
+</div>
+

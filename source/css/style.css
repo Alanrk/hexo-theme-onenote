@@ -1,0 +1,458 @@
+@charset "utf-8";
+
+:root
+{
+    --font-color-0: #000;
+    --font-color-1: #1f1f1f;
+    --font-color-2: #333;
+    --font-color-3: #bbb;
+    --bg-color-1: #eee;
+    --line-1: #f3f3f3;
+    --line-2: #f3f3f3;
+}
+p
+{
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+body
+{
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI","Hiragino Kaku Gothic ProN","Hiragino Sans",Arial,Meiryo,sans-serif;
+    font-size: 16px;
+    line-height: 2rem;
+    letter-spacing: 0.1px;
+    color: var(--font-color-2);
+    background: #f6f7f9;
+}
+a
+{
+    text-decoration: none;
+    color: var(--font-color-1);
+}
+
+.paper
+{
+    padding: 4vw;
+}
+.paper-main
+{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 72px 5vw 0px;
+    background: #fff;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0px 10px 20px 0px rgba(236, 236, 236, 0.86);
+}
+
+.header
+{
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--line-1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+.logo
+{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--font-color-1);
+    margin-bottom: 30px;
+    flex: 0 0 100%;
+}
+.nav
+{
+    margin: 0 0 4px;
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+.nav li
+{
+    padding: 2px 0;
+    margin-right: 24px;
+}
+.nav li:last-of-type
+{
+    margin-right: 0;
+}
+.nav li a
+{
+    color: var(--font-color-1);
+    opacity: .6;
+    transition: opacity ease-in-out .5s;
+}
+.nav li a:hover
+{
+    opacity: 1;
+    transition: opacity ease-in-out .5s;
+}
+
+.post-header
+{
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+.post-header .logo
+{
+    font-size: 1rem;
+}
+.post-header .go-home
+{
+    display: block;
+    padding: 10px 20px 8px;
+    border-radius: 18px;
+    background: #fff;
+    border: 1px solid #eee;
+    margin: 8px 0;
+    transition: background ease-in-out .5s;
+}
+.post-header .go-home:hover
+{
+    background: var(--bg-color-1);
+    transition: background ease-in-out .5s;
+}
+.post-header .go-home svg
+{
+    transform: translateX(0);
+    transition: transform ease-in-out .5s;
+}
+.post-header .go-home:hover svg
+{
+    transform: translateX(-4px);
+    transition: transform ease-in-out .5s;
+}
+
+.post-list
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.post
+{
+    width: 100%;
+    padding-bottom: 0px;
+    margin-bottom: 40px;
+    border-bottom: 1px dashed var(--line-2);
+}
+.post-title
+{
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    color: var(--font-color-1);
+    /*transition: color ease-in-out .5s;*/
+}
+.post-title:hover
+{
+    color: var(--font-color-0);
+    transition: color ease-in-out .5s;
+}
+.post-except
+{
+    word-break: break-all;
+    margin-bottom: 20px;
+}
+.read-more
+{
+    padding: 0 0px;
+    color: var(--font-color-2);   
+}
+.read-more:before,
+.read-more:after
+{
+    display: inline-block;
+    transition: transform ease-in-out .5s;
+}
+.read-more:before
+{
+    content: "";
+}
+.read-more:after
+{
+    content: "";
+}
+.read-more:hover:before
+{
+    transform: translateX(-4px);
+    transition: transform ease-in-out .25s;
+}
+.read-more:hover:after
+{
+    transform: translateX(4px);
+    transition: transform ease-in-out .25s;
+}
+.post-date
+{
+    font-size: 0.75rem;
+    color: var(--font-color-3);
+}
+
+.paginator
+{
+    font-size: 0.875rem;
+    width: 100%;
+    margin: 0 auto 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.paginator *
+{
+    display: block;
+    padding: 8px 16px;
+    border-radius: 18px;
+    background: #fff;
+    border: 1px solid #eee;
+}
+.paginator .space
+{
+    display: block;
+    padding: 8px 16px;
+    border-radius: 18px;
+    background: #fff;
+    border: none;
+}
+.paginator a
+{
+    margin: 4px;
+    color: var(--font-color-2);
+    transition: color ease-in-out .5s;
+}
+.paginator a:hover
+{
+    color: var(--font-color-0);
+    transition: color ease-in-out .5s;
+}
+.paginator .current
+{
+    color: var(--font-color-0);
+    border: 1px solid var(--font-color-0);
+}
+
+.footer
+{
+    padding: 60px 0px 40px 0px;
+    font-size: 0.813rem;
+    color: var(--font-color-3);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+.footer span
+{
+    text-align: center;
+    margin-bottom: 0px;
+}
+.footer a
+{
+    color: var(--font-color-3);
+    transition: color ease-in-out .5s;
+}
+.footer a:hover
+{
+    color: var(--font-color-0);
+    transition: color ease-in-out .5s;
+}
+
+.post-main
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.post-main-title
+{
+    flex: 0 0 100%;
+    margin-bottom: 12px;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--font-color-1);
+}
+.post-meta
+{
+    font-size: 0.875rem;
+    color: var(--font-color-3);
+    flex: 0 0 100%;
+    margin-bottom: 40px;
+}
+
+.post-content-meta
+{
+    font-size: 0.875rem;
+    color: var(--font-color-3);
+    flex: 0 0 100%;
+    margin-bottom: 10px;
+}
+
+.archive
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: normal;
+}
+.archive li
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    padding-bottom: 4px;
+}
+.archive li:nth-child(odd)
+{
+    background: #fff;
+}
+.archive li:nth-child(even)
+{
+    background: #fff;
+}
+.archive li span
+{
+    width: 108px;
+    color: var(--font-color-3);
+}
+.archive-main
+{
+    flex: 0 1 calc( 100% - 108px );
+}
+.archive-list h2
+{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.archive-title
+{
+    color: var(--font-color-1);
+    /*transition: color ease-in-out .5s;*/
+}
+.archive-title:hover
+{
+    color: var(--font-color-0);
+    transition: color ease-in-out .5s;
+}
+
+.tags li
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 10px 0px;
+}
+.tags li:nth-child(odd)
+{
+    background: #fff;
+}
+.tags li:nth-child(even)
+{
+    background: #fff;
+}
+.tags li span
+{
+    width: 108px;
+    color: var(--font-color-2);
+}
+.tags-main
+{
+    flex: 0 1 calc( 100% - 108px );
+}
+.tags-title
+{
+    color: var(--font-color-1);
+    /*transition: color ease-in-out .5s;*/
+}
+.tags-title:hover
+{
+    color: var(--font-color-0);
+    transition: color ease-in-out .5s;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+}
+
+.post-date {
+    margin-right: 20px;
+    font-size: 12px;
+    color: #999;
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #999;
+}
+
+.post-tag {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #999;
+}
+
+.post-tag:hover {
+    text-decoration: underline;
+}
+.tag-emoji {
+    margin-right: 4px;
+    font-size: 12px;
+    color: #bbbbbb; 
+}
+
+.tags-post {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.post-content-meta.tags {
+    font-size: 0.875rem;
+    color: var(--font-color-3);
+    display:flex;
+    margin-top: 40px;
+}
+.post-content-meta.tags .emo{
+    margin-right: 4px;
+}
+.post-content-meta.tags a {
+    font-size: 0.875rem;
+    color: var(--font-color-3);
+    text-decoration: none; /* 去掉链接下划线 */
+}
+
+.post-content-meta.tags a:hover {
+    color: #999999; /* 悬停时改变颜色，可以根据需要自定义 */
+      text-decoration: underline; /* 悬停时显示下划线 */
+}

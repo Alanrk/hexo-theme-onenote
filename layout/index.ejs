@@ -1,0 +1,24 @@
+<%- partial('_partial/header') %>
+<div class="post-list">
+    <% page.posts.each(function (post) { %>
+    <div class="post">
+        <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+        <div class="post-except">
+            <%- strip_html(post.content).substr(0, 240) %>
+            <a class="read-more" href="<%- url_for(post.path) %>"> ...... </a>
+        </div>
+        <div class="post-meta">
+            <div class="post-date"><%- date(post.date, "YYYY.MM.DD") %></div>
+            <% if (post.tags && post.tags.length > 0) { %>
+                <div class="post-tags">
+                    <span class="tag-emoji">#</span>
+                    <% post.tags.each(function(tag) { %>
+                        <a href="<%- url_for(tag.path) %>" class="post-tag"><%= tag.name %></a>
+                    <% }) %>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <% }) %>
+</div>
+<%- partial('_partial/paginator') %>

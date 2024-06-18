@@ -1,0 +1,10 @@
+<%- partial('_partial/header') %>
+<div class="tags-list">
+    <ul class="tags">
+        <% if (site.tags) { %>
+            <% site.tags.forEach(function(tag) { %>
+                 <li><a href="<%= url_for('/tags/' + tag.name + '/') %>"><%= tag.name %> (<%= tag.posts.length %>)</a></li>
+            <% }) %>
+        <% } %>
+    </ul>
+</div>

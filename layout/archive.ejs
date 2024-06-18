@@ -1,0 +1,30 @@
+<%- partial('_partial/header') %>
+<div class="archive-list">
+  <% 
+  var posts = page.posts.sort('date', -1);
+  var currentYear = null;
+  var currentTag = page.tag; // 获取当前选择的标签
+  %>
+  <% if (currentTag) { %>
+    <div class="tags-post">#<%= currentTag %></div>
+  <% } %>
+  <% posts.each(function(post) {
+    var year = post.date.format('YYYY');
+    if (year !== currentYear) {
+      if (currentYear !== null) { %>
+        </ul>
+      <% }
+      currentYear = year; %>
+      <h2><%= year %></h2>
+      <ul class="archive">
+    <% } %>
+    <li>
+      <div class="archive-main">
+        <a class="archive-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+      </div>
+      <span class="archive-date"><%= date(post.date, 'YYYY.MM.DD') %></span>
+    </li>
+  <% }); %>
+  </ul>
+</div>
+<%- partial('_partial/paginator') %>
