@@ -1,4 +1,4 @@
-![[https://github.com/Alanrk/hexo-theme-one_note/blob/main/source/img/screen.jpg]]
+![img](https://github.com/Alanrk/hexo-theme-one_note/blob/main/source/img/screen.jpg)
 
 这里是专注阅读和写作的Hexo主题 “onenote”，性冷淡风格，在原Hexo主题“one-paper”基础上修改而来，原主题“one-paper”链接[zheli-design/hexo-theme-one-paper: 专注于写作，模拟纸张阅读感受的轻量 Hexo 主题。 (github.com)](https://github.com/zheli-design/hexo-theme-one-paper)
 
