@@ -28,7 +28,7 @@
 
 ### 安装
 
-1. 下载 zip 压缩包并解压；
+1. 下载 zip 压缩包并解压将文件夹命名为 onenote；
 2. 复制 onenote 到 hexo/themes 目录下；
 3. 更改博客根目录_config.yml 配置：`theme: onenote`；
 4.  终端切换到博客目录，输入`hexo server` 预览效果。
