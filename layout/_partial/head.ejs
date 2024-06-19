@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <link rel="alternate icon" type="image/png" href="<%- url_for('/img/favicon.png') %>">
-    <title><%= config.title %> | <%= config.subtitle %></title>
+    <title><%= page.title ? page.title + ' - ' + config.title : config.title %></title>
     <%- css('css/reset.css') %>
     <%- css('css/style.css') %>
     <%- css('css/markdown.css') %>
