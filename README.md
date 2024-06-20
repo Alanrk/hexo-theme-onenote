@@ -38,12 +38,8 @@ https://alanrk.github.io/
 
 ###  文章置顶
 
-在需要置顶的文章的 front-matter 中添加一个 sticky 属性，并设定其值。例如：
----
-title: 置顶文章
-date: 2023-06-20
-sticky: 1
----
+1. 在需要置顶的文章的 front-matter 中添加一个 sticky 属性，并设定其值。例如：
+
 
 注意：sticky 的值越大，优先级越高。
 
