@@ -1,7 +1,23 @@
 <%- partial('_partial/header') %>
+<%
+function sortPosts(posts) {
+    return posts.sort((a, b) => {
+        if (a.sticky && b.sticky) {
+            return b.sticky - a.sticky;
+        } else if (a.sticky) {
+            return -1;
+        } else if (b.sticky) {
+            return 1;
+        } else {
+            return b.date - a.date;
+        }
+    });
+}
+const sortedPosts = sortPosts(page.posts.data);
+%>
 <div class="post-list">
-    <% page.posts.each(function (post) { %>
-    <div class="post">
+    <% sortedPosts.forEach(function (post) { %>
+    <div class="post <%= post.sticky ? 'sticky' : '' %>">
         <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
         <div class="post-except">
             <%- strip_html(post.content).substr(0, 240) %>
@@ -22,3 +38,4 @@
     <% }) %>
 </div>
 <%- partial('_partial/paginator') %>
+

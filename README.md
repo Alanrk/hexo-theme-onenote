@@ -25,6 +25,7 @@ https://alanrk.github.io/
 - 新增标签云页：增加标签云页面，点击标签，可查看该标签的所有文章；
 - 代码高亮样式调整：统一代码高亮样式，增加复制代码按钮；
 - 删除 "one-paper"内置第三方字体；
+- 支持文章置顶设置；
 
 以上调整在 chatgpt的支持下完成（毕竟我只是一个只能看懂部分 HTML 和 css的经验的人）。
 
@@ -34,4 +35,19 @@ https://alanrk.github.io/
 2. 复制 onenote 到 hexo/themes 目录下；
 3. 更改博客根目录_config.yml 配置：`theme: onenote`；
 4.  终端切换到博客目录，输入`hexo server` 预览效果。
+
+###  文章置顶
+
+在需要置顶的文章的 front-matter 中添加一个 sticky 属性，并设定其值。例如：
+---
+title: 置顶文章
+date: 2023-06-20
+sticky: 1
+---
+
+注意：sticky 的值越大，优先级越高。
+
+
+
+
 
