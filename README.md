@@ -40,8 +40,9 @@ https://alanrk.github.io/
 
 1. 在需要置顶的文章的 front-matter 中添加一个 sticky 属性，并设定其值。例如：
 
+![img](https://github.com/Alanrk/hexo-theme-onenote/blob/main/source/img/Snipaste_2024-06-20_22-44-31.png)
 
-注意：sticky 的值越大，优先级越高。
+2. 注意：sticky 的值越大，优先级越高。
 
 
 
