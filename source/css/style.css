@@ -430,6 +430,11 @@ a
     font-size: 12px;
     color: #bbbbbb; 
 }
+.post-tags a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #999;
+}
 
 .tags-post {
     font-size: 1.4rem;

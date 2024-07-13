@@ -29,7 +29,7 @@ const sortedPosts = sortPosts(page.posts.data);
                 <div class="post-tags">
                     <span class="tag-emoji">#</span>
                     <% post.tags.each(function(tag) { %>
-                        <a href="<%- url_for(tag.path) %>" class="post-tag"><%= tag.name %></a>
+                         <a href="<%- url_for(tag.path) %>"><%= tag.name %></a>
                     <% }) %>
                 </div>
             <% } %>
