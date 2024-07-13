@@ -433,9 +433,12 @@ a
 .post-tags a {
     margin-right: 10px;
     text-decoration: none;
-    color: #999;
+    color: var(--font-color-3);
 }
-
+.post-tags a:hover {
+    color: #999999; /* 悬停时改变颜色，可以根据需要自定义 */
+    text-decoration: underline; /* 悬停时显示下划线 */
+}
 .tags-post {
     font-size: 1.4rem;
     font-weight: 600;
