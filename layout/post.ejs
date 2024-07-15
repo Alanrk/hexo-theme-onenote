@@ -40,3 +40,32 @@
         </svg>
     </a>
 </div>
+
+<% if(is_post() && theme.valine.enable ){%>
+    <section id="comments">
+        <div id="valine_thread"></div>
+        <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+        <script>
+            var META_INFO = ['nick','mail','link'], 
+                meta = '<%= theme.valine.meta %>'.split(',').filter(function(item){
+                    return META_INFO.indexOf(item) > -1
+                }),
+                serverURLs = '<%= theme.valine.serverURLs %>',
+                vConfig = {
+                    el: '#valine_thread',
+                    meta: meta,
+                    appId: "<%= theme.valine.appId %>",
+                    appKey: "<%= theme.valine.appKey %>",
+                    placeholder: "<%= theme.valine.placeholder %>",
+                    pageSize:'<%= theme.valine.pageSize %>',
+                    avatar:'<%= theme.valine.avatar %>',
+                    lang:'<%= theme.valine.lang %>',
+                    recordIP: '<%= theme.valine.recordIP %>',
+                    enableQQ: '<%= theme.valine.enableQQ %>',
+                };
+            if(!!serverURLs) vConfig['serverURLs'] = serverURLs;
+            var v = new Valine(vConfig);
+            window.v = v
+        </script>
+    </section>
+<% }%>
