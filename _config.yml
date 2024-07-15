@@ -5,3 +5,16 @@ menu:
   关于: /about
 
 language: zh-CN
+
+valine:
+  enable: false # 如果要使用Valine，请设置 enable: true
+  appId:  #your leancloud appId
+  appKey:  #your leancloud appKey
+  meta: nick,mail,link #valine comment header info
+  placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
+  avatar: mp # gravatar style https://valine.js.org/avatar
+  pageSize: 10 # comment list page size
+  lang: zh-CN
+  recordIP: false # valine record ip (true/false)
+  enableQQ: false # enable valine's qq comment (true/false)
+  serverURLs: '' # valine server url
